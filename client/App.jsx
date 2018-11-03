@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SearchBar from './SearchBar';
 
 class App extends Component {
   constructor(props) {
@@ -10,13 +11,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <input type="text" />
-        <select>
-          <option value="prizes">Prize</option>
-          <option value="twitter">Twitter</option>
-          <option value="instagram">Instagram</option>
-        </select>
-        <button type="button">Submit</button>
+        <SearchBar />
       </div>
     );
   }
