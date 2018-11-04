@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import ContestContainer from './ContestContainer';
-import ContestListing from './ContestListing';
 import Login from './Login';
 
 class App extends Component {
@@ -15,9 +14,8 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <ContestContainer />
-        <ContestListing />
         <Login />
+        <ContestContainer />
       </div>
     );
   }

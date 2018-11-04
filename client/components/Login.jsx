@@ -18,7 +18,9 @@ class Login extends Component {
   }
 
   setUser() {
-    const { app_metadata, created_at, confirmed_at, email, id, user_metadata } = netlifyIdentity.currentUser();
+    const {
+      app_metadata, created_at, confirmed_at, email, id, user_metadata,
+    } = netlifyIdentity.currentUser();
     const currentUser = {
       app_metadata,
       created_at,
@@ -33,13 +35,13 @@ class Login extends Component {
   }
 
   login() {
-    this.netlifyIdentity.open()
+    this.netlifyIdentity.open();
   }
 
   logout() {
     this.setState({
       user: null,
-    })
+    });
   }
 
   render() {
@@ -52,8 +54,8 @@ class Login extends Component {
       <div>
         <div>{this.state.currentUser}</div>
         <div>
-          {this.state.user ?
-            <a onClick={this.logout.bind(this)}>Logout</a>
+          {this.state.user
+            ? <a onClick={this.logout.bind(this)}>Logout</a>
             : actionForm
           }
         </div>
