@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Header from './Header';
 
 const FormField = styled.div`
   margin-bottom: 5px;
@@ -75,7 +76,7 @@ const StyledSubmit = styled.input`
   }
 `;
 
-class SignUp extends React.Component {
+class Forms extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -92,6 +93,7 @@ class SignUp extends React.Component {
   render() {
     return (
       <div>
+        <Header />
         <FormContainer>
           <h1>Fill out the form below to host a giveaway!</h1>
           <form method="POST" action="https://formspree.io/">
@@ -144,4 +146,4 @@ class SignUp extends React.Component {
   }
 }
 
-export default SignUp;
+export default Forms;
