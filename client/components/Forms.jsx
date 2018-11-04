@@ -1,4 +1,33 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const FormField = styled.div`
+  border-width: 10px;
+  border: 3px solid green;
+  margin-bottom: 10px;
+`;
+
+const StyledInput = styled.input`
+  height: 30px;
+  width: 90%;
+`;
+const Title = styled.h2`
+  font-size: 20px;
+  color: white;
+`;
+
+const FormContainer = styled.div`
+  width: 50%;
+  margin: auto;
+  border-width: 1px;
+  background-color: green;
+`;
+
+// const TitleContainer = styled.div`
+//   width: 100%;
+//   border-width: 1px;
+//   border-color: black;
+// `;
 
 class SignUp extends React.Component {
   constructor(props) {
@@ -11,55 +40,52 @@ class SignUp extends React.Component {
   stateSetter(event) {
     this.setState({
       [event.target.name]: event.target.value,
-    }, (console.log(this.state)));
+    });
   }
 
   render() {
     return (
-      <div>
-        <form method="POST" action="https://formspree.io/YOUREMAILHERE">
-          <label htmlFor="Title">
-            Title
-            <input type="text" name="Title" id="Title" placeholder="Title" onChange={event => this.stateSetter(event)} />
-          </label>
-          <label htmlFor="Name">
-            Name
-            <input type="text" name="Name" id="Name" placeholder="Full Name" onChange={event => this.stateSetter(event)} />
-          </label>
-          {/* <br /> */}
-          <label htmlFor="Description">
-            Description
-            <textarea name="Description" id="Description" placeholder="Description" onChange={event => this.stateSetter(event)} />
-          </label>
-          {/* <br /> */}
-          <label htmlFor="URL to post">
-            URL to post
-            <input type="URL to post" name="URL to post" id="URL to post" placeholder="Link to Giveaway" onChange={event => this.stateSetter(event)} />
-          </label>
-          {/* <br /> */}
-          <label htmlFor="Prizes">
-            Prizes
-            <input type="text" name="Prizes" id="Prizes" placeholder="Prizes" onChange={event => this.stateSetter(event)} />
-          </label>
-          {/* <br /> */}
-          <label htmlFor="Start Date">
-            Start Date
-            <input type="date" nane="Start Date" id="Start Date" placeholder="Start Date" onChange={event => this.stateSetter(event)} />
-          </label>
-          {/* <br /> */}
-          <label htmlFor="End Date">
-            End Date
-            <input type="date" name="End Date" id="End Date" placeholder="End Date" onChange={event => this.stateSetter(event)} />
-          </label>
-          {/* <br /> */}
-          <label htmlFor="Image">
-            Image
-            <input type="file" name="Image" id="Image" placeholder="Upload a File" onChange={event => this.stateSetter(event)} />
-          </label>
-          {/* <br /> */}
-          <input type="submit" />
+      <FormContainer>
+        <form method="POST" action="https://formspree.io/">
+          <FormField>
+            <Title>Title</Title>
+            <StyledInput type="text" name="Title" id="Title" size="50" placeholder="Title" onChange={event => this.stateSetter(event)} />
+          </FormField>
+          <FormField>
+            <Title>Name</Title>
+            <StyledInput type="text" name="Name" id="Name" size="50" placeholder="Full Name" onChange={event => this.stateSetter(event)} />
+          </FormField>
+          <FormField>
+            <Title>Description</Title>
+            <textarea name="Description" id="Description" rows="10" cols="50" placeholder="Description" onChange={event => this.stateSetter(event)} />
+          </FormField>
+          <FormField>
+            <Title>Social Media Site</Title>
+            <StyledInput type="text" name="Social Media Site" id="Social Media Site" size="50" placeholder="Social Media Site" onChange={event => this.stateSetter(event)} />
+          </FormField>
+          <FormField>
+            <Title>Link to Giveaway</Title>
+            <StyledInput type="url" name="URL to post" id="URL to post" size="50" placeholder="Link to Giveaway" onChange={event => this.stateSetter(event)} />
+          </FormField>
+          <FormField>
+            <Title> Prizes</Title>
+            <StyledInput type="text" name="Prizes" id="Prizes" size="50" placeholder="Prizes" onChange={event => this.stateSetter(event)} />
+          </FormField>
+          <FormField>
+            <Title>Start Date</Title>
+            <StyledInput type="date" nane="Start Date" id="Start Date" size="50" placeholder="Start Date" onChange={event => this.stateSetter(event)} />
+          </FormField>
+          <FormField>
+          <Title>End Date</Title>
+            <StyledInput type="date" name="End Date" id="End Date" size="50" placeholder="End Date" onChange={event => this.stateSetter(event)} />
+          </FormField>
+          <FormField>
+            <Title>Image</Title>
+            <StyledInput type="file" name="Image" id="Image" size="50" placeholder="Upload a File" onChange={event => this.stateSetter(event)} />
+          </FormField>
+          <StyledInput type="submit" />
         </form>
-      </div>
+      </FormContainer>
     );
   }
 }
