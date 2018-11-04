@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "build": "webpack -d --watch",
+    "build": "webpack -d",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alan Fu",
@@ -22,6 +22,8 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "express": "^4.16.4",
+    "faunadb": "^2.5.2",
+    "netlify-identity-widget": "^1.4.14",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "webpack": "^4.20.2",
