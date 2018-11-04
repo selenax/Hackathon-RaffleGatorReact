@@ -4,8 +4,9 @@ import ContestListing from './ContestListing';
 
 const Wrapper = styled.div`
 	display: flex;
-	flex-direction: column;
-	width: 75%;
+  flex-direction: row;
+  flex-wrap: wrap;
+	width: 80%;
 	height: auto;
 	margin: 25px auto;
 `;
