@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import SearchBar from './SearchBar';
+import Header from './Header';
 import ContestContainer from './ContestContainer';
 import ContestListing from './ContestListing';
 import readAll from './models/readAll.js';
 import addContest from './models/addContest.js';
+import SearchBar from './SearchBar';
 
 class App extends Component {
   constructor(props) {
@@ -26,9 +27,9 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Header />
         <SearchBar />
         <ContestContainer />
-        <ContestListing />
       </div>
     );
   }

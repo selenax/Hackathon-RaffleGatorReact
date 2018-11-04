@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "build": "webpack -d --watch",
+    "build": "webpack -d",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alan Fu",
@@ -14,6 +14,7 @@
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "@material-ui/core": "^3.3.2",
     "axios": "^0.18.0",
     "babel-loader": "^8.0.4",
     "dotenv": "^6.1.0",
@@ -25,8 +26,12 @@
     "express": "^4.16.4",
     "faunadb": "^2.5.2",
     "path": "^0.12.7",
+    "material-ui": "^0.20.2",
+    "material-ui-search-bar": "^0.4.2",
+    "netlify-identity-widget": "^1.4.14",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "styled-components": "^4.0.3",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"
   },
