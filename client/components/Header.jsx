@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
@@ -10,6 +10,7 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      redirect: '', // To be use for onClick button functions
     };
   }
 
