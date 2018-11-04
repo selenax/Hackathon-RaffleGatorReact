@@ -6,15 +6,17 @@ const Wrapper = styled.div`
 	flex-direction: column;
 	width: 90%;
 	padding: 20px;
-	margin: 15px;
+	margin: 12px;
+	padding: 25px;
 	background-color: #dedede;
 `;
 
 const HeaderContainer = styled.div`
-	text-align: left;
 	display: flex;
 	flex-direction: row;
 	align-items: baseline;
+	text-align: left;
+	height: 15%;
 `;
 
 const Dates = styled.div`
@@ -35,7 +37,7 @@ class ContestListing extends Component {
     return (
       <Wrapper>
         <HeaderContainer>
-          <h1 style={{ fontSize: '65px' }}>{this.props.title}</h1>
+          <h1 style={{ fontSize: '65px', margin: '15px' }}>{this.props.title}</h1>
           <h2 style={{ fontSize: '35px', leftMargin: '30px' }}>{this.props.hostName}</h2>
         </HeaderContainer>
         <h3 style={{ fontSize: '20px' }}>
