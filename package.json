@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "build": "webpack -d --watch",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alan Fu",
@@ -18,6 +18,8 @@
     "@material-ui/icons": "^3.0.1",
     "axios": "^0.18.0",
     "babel-loader": "^8.0.4",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
     "dotenv": "^6.1.0",
     "eslint": "^5.7.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -34,6 +36,7 @@
     "react-dom": "^16.5.2",
     "react-router-dom": "^4.3.1",
     "styled-components": "^4.0.3",
+    "twitter": "^1.7.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"
   },
