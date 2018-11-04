@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import SearchBar from './SearchBar';
 import ContestContainer from './ContestContainer';
 import ContestListing from './ContestListing';
+import Form from './Forms';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      
     };
   }
 
@@ -16,6 +18,7 @@ class App extends Component {
         <SearchBar />
         <ContestContainer />
         <ContestListing />
+        <Form />
       </div>
     );
   }
