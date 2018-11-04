@@ -30,7 +30,7 @@ const FormContainer = styled.div`
 //   border-color: black;
 // `;
 
-class SignUp extends React.Component {
+class Forms extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -94,4 +94,4 @@ class SignUp extends React.Component {
   }
 }
 
-export default SignUp;
+export default Forms;
