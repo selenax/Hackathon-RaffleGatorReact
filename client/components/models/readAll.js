@@ -16,7 +16,7 @@ let readAll = () => {
       q.Map(
         q.Paginate(
           q.Match( // todo use lists_by_owner
-            q.Ref("indexes/all_posts"))), (ref) => q.Get(ref))).then((r) => {
+            q.Ref("indexes/all_contents"))), (ref) => q.Get(ref))).then((r) => {
       let array = r.data;
       let results = [];
       array.map(entry => (

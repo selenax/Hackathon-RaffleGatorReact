@@ -8,18 +8,16 @@ const client = new faunadb.Client({
   secret: "fnAC-8Uj8TACANHmvAaKxX0ao6FAfRt0OoZ-RHcg"
 });
 
-let addContest = (contest) => {
+let addHost = (hosts) => {
 
   client.query(
     q.Create(
-      q.Class("constests"), {
-        data: contest
+      q.Class("hosts"), {
+        data: hosts
 
       })).then((r) => {
     console.log(r);
   })
 }
 
-export default addContest;
-
-// addContest({"name": "mike", "age": 100});
+export default addHost;
