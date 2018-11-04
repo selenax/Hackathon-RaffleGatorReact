@@ -32,7 +32,7 @@ const Dates = styled.div`
 	align-items: center;
 `;
 
-class ContestListing extends Component {
+class ContestPopup extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -118,4 +118,4 @@ class ContestListing extends Component {
   }
 }
 
-export default ContestListing;
+export default ContestPopup;
