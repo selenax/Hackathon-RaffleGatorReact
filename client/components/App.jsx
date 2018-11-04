@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import ContestContainer from './ContestContainer';
-import Login from './Login';
+import SearchBar from './SearchBar';
 
 class App extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Login />
+        <SearchBar />
         <ContestContainer />
       </div>
     );
