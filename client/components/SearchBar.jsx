@@ -63,7 +63,7 @@ class SearchBar extends Component {
             <MenuItem value="instagram">Instagram</MenuItem>
           </Select>
         </FormControl>
-        <Button style={{ background: 'lightgreen', marginLeft: '5px' }}>Submit</Button>
+        <Button style={{ background: '#50d86c', marginLeft: '5px' }}>Submit</Button>
       </div>
     );
   }

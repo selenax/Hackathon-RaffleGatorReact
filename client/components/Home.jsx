@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import ContestContainer from './ContestContainer';
-import ContestListing from './ContestListing';
 import SearchBar from './SearchBar';
 
 class Home extends Component {
@@ -17,7 +16,6 @@ class Home extends Component {
         <Header />
         <SearchBar />
         <ContestContainer />
-        <ContestListing />
       </div>
     );
   }
