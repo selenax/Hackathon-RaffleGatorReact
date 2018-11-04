@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from './Header';
+import addContest from './models/addContest';
 
 const FormField = styled.div`
   margin-bottom: 5px;
@@ -16,6 +17,8 @@ const StyledInput = styled.input`
   font-size: 20px;
   border-radius: 5px;
   border: 5px;
+  font-family: 'Montserrat', sans-serif;
+
 `;
 
 const StyledTextArea = styled.textarea`
@@ -28,6 +31,8 @@ const StyledTextArea = styled.textarea`
   -moz-box-shadow: inset 0 0 10px #000000;
   -webkit-box-shadow: inset 0 0 10px #000000;
   box-shadow: inset 0 0 10px #000000;
+  font-family: 'Montserrat', sans-serif;
+
 `;
 
 const StyledFileInputContainer = styled.div`
@@ -54,7 +59,8 @@ const StyledFileInput = styled.input`
 `;
 
 const FormContainer = styled.div`
-  width: 75%;
+  width: 80%;
+  max-width: 1125px;
   height: 100%;
   margin: auto;
   border: 1px;
@@ -64,14 +70,18 @@ const StyledSubmit = styled.input`
   height: 50px;
   width: 100%;
   font-size: 20px;
-  background-color: red;
-`;
+  background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
 
-// const TitleContainer = styled.div`
-//   width: 100%;
-//   border-width: 1px;
-//   border-color: black;
-// `;
+  &:hover {
+    box-shadow: inset 0 0 10px #000000;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+`;
 
 class Forms extends React.Component {
   constructor(props) {
@@ -87,55 +97,49 @@ class Forms extends React.Component {
     });
   }
 
+  newContest(e) {
+    e.preventDefault();
+    if (Object.keys(this.state).length !== 8) {
+      alert('Please fill in all fields');
+    } else {
+      addContest(this.state);
+    }
+  }
+
   render() {
     return (
       <div>
         <Header />
         <FormContainer>
-          <h1>Fill out the form below to host a giveaway!</h1>
-          <form method="POST" action="https://formspree.io/">
+          <h1 style={{ 'font-family': "'Montserrat', sans-serif", 'text-align': 'center' }}>Fill out the form below to host a giveaway!</h1>
+          <form action="">
             <FormField>
-              {/* <Title>Title</Title> */}
-              <StyledInput type="text" name="Title" id="Title" placeholder="Title" onChange={event => this.stateSetter(event)} />
+              <StyledInput type="text" name="Title" id="Title" placeholder="Enter title of the giveaway" onChange={event => this.stateSetter(event)} />
             </FormField>
             <FormField>
-              {/* <Title>Name</Title> */}
-              <StyledInput type="text" name="Name" id="Name" placeholder="Full Name" onChange={event => this.stateSetter(event)} />
+              <StyledInput type="text" name="Name" id="Name" placeholder="Enter your full name" onChange={event => this.stateSetter(event)} />
             </FormField>
             <FormField>
-              {/* <Title>Description</Title> */}
-              <StyledTextArea name="Description" id="Description" rows="10" placeholder="Description" onChange={event => this.stateSetter(event)} />
+              <StyledTextArea name="Description" id="Description" rows="10" placeholder="Talk about your giveaway here" onChange={event => this.stateSetter(event)} />
             </FormField>
             <FormField>
-              {/* <Title>Social Media Site</Title> */}
               <StyledInput type="text" name="Social Media Site" id="Social Media Site" placeholder="Social Media Site" onChange={event => this.stateSetter(event)} />
             </FormField>
             <FormField>
-              {/* <Title>Link to Giveaway</Title> */}
-              <StyledInput type="url" name="URL to post" id="URL to post" placeholder="Link to Giveaway" onChange={event => this.stateSetter(event)} />
+              <StyledInput type="url" name="URL to post" id="URL to post" placeholder="Enter link to giveaway" onChange={event => this.stateSetter(event)} />
             </FormField>
             <FormField>
-              {/* <Title> Prizes</Title> */}
-              <StyledInput type="text" name="Prizes" id="Prizes" placeholder="Prizes" onChange={event => this.stateSetter(event)} />
+              <StyledInput type="text" name="Prizes" id="Prizes" placeholder="Enter prize(s)" onChange={event => this.stateSetter(event)} />
             </FormField>
             <FormField>
-              {/* <Title>Start Date</Title> */}
-              <StyledInput type="text" name="Start Date" id="Start Date" placeholder="mm/dd/yyyy" onChange={event => this.stateSetter(event)} />
+              <StyledInput type="text" name="Start Date" id="Start Date" placeholder="Enter start date" onChange={event => this.stateSetter(event)} />
             </FormField>
             <FormField>
-            {/* <Title>End Date</Title> */}
-              <StyledInput type="text" name="End Date" id="End Date" placeholder="mm/dd/yyyy" onChange={event => this.stateSetter(event)} />
+              <StyledInput type="text" name="End Date" id="End Date" placeholder="Enter end date" onChange={event => this.stateSetter(event)} />
             </FormField>
-            <FormField>
-              {/* <Title>Image</Title> */}
-              <StyledFileInputContainer>
-                <StyledUploadButton>Upload Image</StyledUploadButton>
-                <StyledFileInput type="file" name="Image" />
-              </StyledFileInputContainer>
-            </FormField>
-            <FormField>
-              <StyledSubmit type="submit" />
-            </FormField>
+            <div style={{ 'user-select': 'none', 'padding-left': '9px' }}>
+              <StyledSubmit name="Submit" value="Submit" type="submit" onClick={e => this.newContest(e)} />
+            </div>
           </form>
         </FormContainer>
       </div>
