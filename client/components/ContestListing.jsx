@@ -35,11 +35,31 @@ class ContestListing extends Component {
 
   render() {
     return (
-      <Wrapper style={{position: 'relative', overflow: 'hidden' }}>
-        <div className="top left" style={{ position: 'absolute', width: '41px', height: '41px', borderRadius: '100%', backgroundColor: 'white', top: '-10px', left: '-10px' }}></div>
-        <div className="top right" style={{ position: 'absolute', width: '41px', height: '41px', borderRadius: '100%', backgroundColor: 'white', top: '-10px', right: '-10px' }}></div>
-        <div className="bottom left" style={{ position: 'absolute', width: '41px', height: '41px', borderRadius: '100%', backgroundColor: 'white', bottom: '-10px', left: '-10px' }}></div>
-        <div className="bottom right" style={{ position: 'absolute', width: '41px', height: '41px', borderRadius: '100%', backgroundColor: 'white', bottom: '-10px', right: '-10px' }}></div>
+      <Wrapper style={{ position: 'relative', overflow: 'hidden' }}>
+        <div
+          className="top left"
+          style={{
+            position: 'absolute', width: '41px', height: '41px', borderRadius: '100%', backgroundColor: 'white', top: '-10px', left: '-10px',
+          }}
+        />
+        <div
+          className="top right"
+          style={{
+            position: 'absolute', width: '41px', height: '41px', borderRadius: '100%', backgroundColor: 'white', top: '-10px', right: '-10px',
+          }}
+        />
+        <div
+          className="bottom left"
+          style={{
+            position: 'absolute', width: '41px', height: '41px', borderRadius: '100%', backgroundColor: 'white', bottom: '-10px', left: '-10px',
+          }}
+        />
+        <div
+          className="bottom right"
+          style={{
+            position: 'absolute', width: '41px', height: '41px', borderRadius: '100%', backgroundColor: 'white', bottom: '-10px', right: '-10px',
+          }}
+        />
         <HeaderContainer>
           <h1 style={{ fontSize: '65px', margin: '15px' }}>{this.props.title}</h1>
           <h2 style={{ fontSize: '35px', leftMargin: '30px' }}>{this.props.hostName}</h2>

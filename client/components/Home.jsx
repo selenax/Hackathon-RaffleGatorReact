@@ -17,7 +17,6 @@ class Home extends Component {
         <Header />
         <SearchBar />
         <ContestContainer />
-        <ContestListing />
       </div>
     );
   }
