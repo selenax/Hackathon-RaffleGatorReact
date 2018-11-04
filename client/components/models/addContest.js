@@ -12,7 +12,7 @@ let addContest = (contest) => {
 
   client.query(
     q.Create(
-      q.Class("constests"), {
+      q.Class("contests"), {
         data: contest
 
       })).then((r) => {
