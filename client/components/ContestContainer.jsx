@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import ContestListing from './ContestListing';
+import ContestPopup from './ContestPopup';
+import dummyData from '../../dummyData';
 
 const Wrapper = styled.div`
 	display: flex;
@@ -15,34 +17,22 @@ class ContestContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      clicked: false,
     };
+    this.clicked = this.clicked.bind(this);
+  }
+
+  clicked() {
+    const clickCheck = !this.state.clicked;
+    this.setState({
+      clicked: clickCheck,
+    });
   }
 
   render() {
+    // console.log(dummyData);
     return (
       <Wrapper>
-        <ContestListing
-          title="Fake Contest 1"
-          hostName="Johnny Youtuber"
-          contestSite="Youtube"
-          img="../images/image.jpg"
-          startDate="Nov. 3, 2018"
-          endDate="Nov. 5, 2018"
-          postURL="https://youtube.com/"
-          prize="Bag of Chips"
-          numContestants="1,593"
-        />
-        <ContestListing
-          title="Fake Contest 2"
-          hostName="Johnny Youtuber"
-          contestSite="Youtube"
-          img="../images/image.jpg"
-          startDate="Nov. 3, 2018"
-          endDate="Nov. 5, 2018"
-          postURL="https://youtube.com/"
-          prize="Bag of Chips"
-          numContestants="1,593"
-        />
         <ContestListing
           title="Fake Contest 3"
           hostName="Johnny Youtuber"
@@ -53,6 +43,7 @@ class ContestContainer extends Component {
           postURL="https://youtube.com/"
           prize="Bag of Chips"
           numContestants="1,593"
+          onClick={this.clicked}
         />
         <ContestListing
           title="Fake Contest 4"
@@ -131,6 +122,21 @@ class ContestContainer extends Component {
           prize="Bag of Chips"
           numContestants="1,593"
         />
+        <div id="popup">
+          {
+            this.state.clicked ?
+              <ContestPopup 
+                title="Fake Contest 3"
+                hostName="Johnny Youtuber"
+                contestSite="Youtube"
+                img="../images/image.jpg"
+                startDate="Nov. 3, 2018"
+                endDate="Nov. 5, 2018"
+                postURL="https://youtube.com/"
+                prize="Bag of Chips"
+                numContestants="1,593"/> : null
+          }
+          </div>
       </Wrapper>
     );
   }
