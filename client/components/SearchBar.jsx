@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class SearchBar extends Component {
           <option value="twitter">Twitter</option>
           <option value="instagram">Instagram</option>
         </select>
-        <button type="button">Submit</button>
+        <Button style={{ background: 'lightgreen' }}>Submit</Button>
       </div>
     );
   }
