@@ -5,6 +5,7 @@ import readAll from './models/readAll';
 import About from './About';
 import addContest from './models/addContest';
 import Home from './Home';
+import DashBoardContainer from './DashBoardContainer';
 
 class App extends Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/form" component={Forms} />
           <Route path="/about" component={About} />
+          <Route path="/dashboard" component={DashBoardContainer} />
         </div>
       </BrowserRouter>
     );
