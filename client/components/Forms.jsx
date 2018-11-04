@@ -76,7 +76,7 @@ class SignUp extends React.Component {
             <StyledInput type="date" nane="Start Date" id="Start Date" size="50" placeholder="Start Date" onChange={event => this.stateSetter(event)} />
           </FormField>
           <FormField>
-          <Title>End Date</Title>
+            <Title>End Date</Title>
             <StyledInput type="date" name="End Date" id="End Date" size="50" placeholder="End Date" onChange={event => this.stateSetter(event)} />
           </FormField>
           <FormField>
