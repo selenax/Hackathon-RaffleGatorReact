@@ -63,7 +63,16 @@ const StyledSubmit = styled.input`
   height: 50px;
   width: 100%;
   font-size: 20px;
-  background-color: red;
+  background-color: #ff0000;
+
+  &:hover {
+    box-shadow: inset 0 0 10px #000000;
+    background-color: #b20000;
+  }
+
+  &:active {
+    transform: translateY(4px);
+  }
 `;
 
 // const TitleContainer = styled.div`
@@ -121,7 +130,7 @@ class SignUp extends React.Component {
               <StyledInput type="text" name="Start Date" id="Start Date" placeholder="mm/dd/yyyy" onChange={event => this.stateSetter(event)} />
             </FormField>
             <FormField>
-            {/* <Title>End Date</Title> */}
+              {/* <Title>End Date</Title> */}
               <StyledInput type="text" name="End Date" id="End Date" placeholder="mm/dd/yyyy" onChange={event => this.stateSetter(event)} />
             </FormField>
             <FormField>
