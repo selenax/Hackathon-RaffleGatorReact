@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
+import { Link } from 'react-router-dom';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
@@ -26,14 +27,14 @@ class Header extends Component {
               color="secondary"
               style={{ margin: '10px', color: 'white', background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)' }}
             >
-Home
+              <Link to="/">Home</Link>
             </Button>
             <Button
               variant="contained"
               color="secondary"
               style={{ color: 'white', background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)' }}
             >
-About
+              <Link to="/about">About</Link>
             </Button>
           </Toolbar>
         </AppBar>
