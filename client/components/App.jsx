@@ -15,11 +15,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    readAll().then((results) => {
-      this.setState({
-        contests: results,
-      });
-    });
+    // readAll().then((results) => {
+    //   this.setState({
+    //     contests: results,
+    //   });
+    // });
   }
 
   render() {
