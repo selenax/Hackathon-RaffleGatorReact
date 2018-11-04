@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
+import { Link, Redirect } from 'react-router-dom';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
@@ -9,6 +10,7 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      redirect: '', // To be use for onClick button functions
     };
   }
 
@@ -19,6 +21,7 @@ class Header extends Component {
           position="static"
           style={{ background: 'lightblue' }}
         >
+          <div style={{ fontFamily: 'Righteous, cursive', marginTop: '3px', marginLeft: '6px', position: 'absolute', fontSize: '48px', color: '#26AF42' }}>RaffleGator</div>
           <Toolbar color="secondary" style={{ marginLeft: 'auto' }}>
             <Login />
             <Button
@@ -26,14 +29,21 @@ class Header extends Component {
               color="secondary"
               style={{ margin: '10px', color: 'white', background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)' }}
             >
-Home
+              <Link to="/">Home</Link>
             </Button>
             <Button
               variant="contained"
               color="secondary"
               style={{ color: 'white', background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)' }}
             >
-About
+              <Link to="/about">About</Link>
+            </Button>
+            <Button
+              variant="contained"
+              color="secondary"
+              style={{ margin: '10px', color: 'white', background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)' }}
+            >
+              <Link to="/form">Form</Link>
             </Button>
           </Toolbar>
         </AppBar>
