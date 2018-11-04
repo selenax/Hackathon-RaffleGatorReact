@@ -9,10 +9,9 @@ const client = new faunadb.Client({
 });
 
 let addContest = (contest) => {
-
   client.query(
     q.Create(
-      q.Class("contests"), {
+      q.Class("contest"), {
         data: contest
 
       })).then((r) => {
