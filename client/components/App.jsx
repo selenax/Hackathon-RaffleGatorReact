@@ -27,12 +27,12 @@ class App extends Component {
         <div>
           <Route exact path="/" component={Home} />
           <Route path="/form" component={SignUp} />
-          <Route path="/about" component={About} />
         </div>
       </BrowserRouter>
     );
   }
 }
 
+// <Route path="/about" component={About} />
 
 export default App;
