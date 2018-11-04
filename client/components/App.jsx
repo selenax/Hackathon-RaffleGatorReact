@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import SignUp from './Forms';
+import Forms from './Forms';
 import readAll from './models/readAll';
+import About from './About';
 import addContest from './models/addContest';
 import Home from './Home';
 
@@ -26,13 +27,13 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Route exact path="/" component={Home} />
-          <Route path="/form" component={SignUp} />
+          <Route path="/form" component={Forms} />
+          <Route path="/about" component={About} />
         </div>
       </BrowserRouter>
     );
   }
 }
 
-// <Route path="/about" component={About} />
 
 export default App;
