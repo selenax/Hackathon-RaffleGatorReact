@@ -11,7 +11,7 @@ class SearchBar extends Component {
   render() {
     return (
       <div>
-        <input type="text" />
+        <input style={{ padding: '7px', width: '200px' }} type="text" />
         <select>
           <option value="prizes">Prize</option>
           <option value="twitter">Twitter</option>

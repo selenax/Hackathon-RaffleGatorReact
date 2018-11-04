@@ -1,4 +1,14 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+import ContestListing from './ContestListing';
+
+const Wrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	width: 75%;
+	height: auto;
+	margin: 25px auto;
+`;
 
 class ContestContainer extends Component {
   constructor(props) {
@@ -9,9 +19,63 @@ class ContestContainer extends Component {
 
   render() {
     return (
-      <div>
-        [ContestContainer here]
-      </div>
+      <Wrapper>
+        <ContestListing
+          title="Fake Contest 1"
+          hostName="Johnny Youtuber"
+          contestSite="Youtube"
+          img="../images/image.jpg"
+          startDate="Nov. 3, 2018"
+          endDate="Nov. 5, 2018"
+          postURL="https://youtube.com/"
+          prize="Bag of Chips"
+          numContestants="1,593"
+        />
+        <ContestListing
+          title="Fake Contest 2"
+          hostName="Johnny Youtuber"
+          contestSite="Youtube"
+          img="../images/image.jpg"
+          startDate="Nov. 3, 2018"
+          endDate="Nov. 5, 2018"
+          postURL="https://youtube.com/"
+          prize="Bag of Chips"
+          numContestants="1,593"
+        />
+        <ContestListing
+          title="Fake Contest 3"
+          hostName="Johnny Youtuber"
+          contestSite="Youtube"
+          img="../images/image.jpg"
+          startDate="Nov. 3, 2018"
+          endDate="Nov. 5, 2018"
+          postURL="https://youtube.com/"
+          prize="Bag of Chips"
+          numContestants="1,593"
+        />
+        <ContestListing
+          title="Fake Contest 4"
+          hostName="Johnny Youtuber"
+          contestSite="Youtube"
+          img="../images/image.jpg"
+          startDate="Nov. 3, 2018"
+          endDate="Nov. 5, 2018"
+          postURL="https://youtube.com/"
+          prize="Bag of Chips"
+          numContestants="1,593"
+        />
+        <ContestListing
+          title="Fake Contest 5"
+          hostName="Johnny Youtuber"
+          contestSite="Youtube"
+          img="../images/image.jpg"
+          startDate="Nov. 3, 2018"
+          endDate="Nov. 5, 2018"
+          postURL="https://youtube.com/"
+          prize="Bag of Chips"
+          numContestants="1,593"
+        />
+      </Wrapper>
     );
   }
 }

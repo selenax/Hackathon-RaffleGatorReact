@@ -3,7 +3,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
-import SearchBar from './SearchBar';
+import Login from './Login';
 
 class Header extends Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class Header extends Component {
           style={{ background: 'lightblue' }}
         >
           <Toolbar color="secondary" style={{ marginLeft: 'auto' }}>
-            <SearchBar />
+            <Login />
             <Button
               variant="contained"
               color="secondary"

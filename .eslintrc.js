@@ -11,5 +11,12 @@ module.exports = {
     "no-console": 0,
     "react/destructuring-assignment": ["enabled", 'always'],
     "react/prop-types": ["enabled", { "ignore": ['handleClick', 'handleAsk'], "customValidators": "customValidator" }],
-  }
+    "jsx-a11y/label-has-for": [ 2, {
+      "components": [ "Label" ],
+      "required": {
+          "some": [ "nesting", "id" ]
+      },
+      "allowChildren": false
+    }]
+  },
 };
