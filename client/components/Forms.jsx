@@ -3,25 +3,68 @@ import styled from 'styled-components';
 import Header from './Header';
 
 const FormField = styled.div`
-  border-width: 10px;
-  border: 3px solid green;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 `;
 
 const StyledInput = styled.input`
-  height: 30px;
-  width: 90%;
-`;
-const Title = styled.h2`
+  padding-left: 10px;
+  height: 40px;
+  width: 100%;
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
   font-size: 20px;
-  color: white;
+  border-radius: 5px;
+  border: 5px;
+`;
+
+const StyledTextArea = styled.textarea`
+  width: 100%;
+  padding-left: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  resize: none;
+  border: 5px;
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
+`;
+
+const StyledFileInputContainer = styled.div`
+  position: relative;
+  overflow: hidden;
+`;
+
+const StyledUploadButton = styled.button`
+  height: 50px;
+  border: 3px solid grey;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 1px;
+  color: gray;
+`;
+
+const StyledFileInput = styled.input`
+  height: 50px;
+  width: 145px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
 `;
 
 const FormContainer = styled.div`
-  width: 50%;
+  width: 75%;
+  height: 100%;
   margin: auto;
-  border-width: 1px;
-  background-color: green;
+  border: 1px;
+`;
+
+const StyledSubmit = styled.input`
+  height: 50px;
+  width: 100%;
+  font-size: 20px;
+  background-color: red;
 `;
 
 // const TitleContainer = styled.div`
@@ -47,46 +90,51 @@ class Forms extends React.Component {
   render() {
     return (
       <div>
-        <Header />
         <FormContainer>
+          <h1>Fill out the form below to host a giveaway!</h1>
           <form method="POST" action="https://formspree.io/">
             <FormField>
-              <Title>Title</Title>
-              <StyledInput type="text" name="Title" id="Title" size="50" placeholder="Title" onChange={event => this.stateSetter(event)} />
+              {/* <Title>Title</Title> */}
+              <StyledInput type="text" name="Title" id="Title" placeholder="Title" onChange={event => this.stateSetter(event)} />
             </FormField>
             <FormField>
-              <Title>Name</Title>
-              <StyledInput type="text" name="Name" id="Name" size="50" placeholder="Full Name" onChange={event => this.stateSetter(event)} />
+              {/* <Title>Name</Title> */}
+              <StyledInput type="text" name="Name" id="Name" placeholder="Full Name" onChange={event => this.stateSetter(event)} />
             </FormField>
             <FormField>
-              <Title>Description</Title>
-              <textarea name="Description" id="Description" rows="10" cols="50" placeholder="Description" onChange={event => this.stateSetter(event)} />
+              {/* <Title>Description</Title> */}
+              <StyledTextArea name="Description" id="Description" rows="10" placeholder="Description" onChange={event => this.stateSetter(event)} />
             </FormField>
             <FormField>
-              <Title>Social Media Site</Title>
-              <StyledInput type="text" name="Social Media Site" id="Social Media Site" size="50" placeholder="Social Media Site" onChange={event => this.stateSetter(event)} />
+              {/* <Title>Social Media Site</Title> */}
+              <StyledInput type="text" name="Social Media Site" id="Social Media Site" placeholder="Social Media Site" onChange={event => this.stateSetter(event)} />
             </FormField>
             <FormField>
-              <Title>Link to Giveaway</Title>
-              <StyledInput type="url" name="URL to post" id="URL to post" size="50" placeholder="Link to Giveaway" onChange={event => this.stateSetter(event)} />
+              {/* <Title>Link to Giveaway</Title> */}
+              <StyledInput type="url" name="URL to post" id="URL to post" placeholder="Link to Giveaway" onChange={event => this.stateSetter(event)} />
             </FormField>
             <FormField>
-              <Title> Prizes</Title>
-              <StyledInput type="text" name="Prizes" id="Prizes" size="50" placeholder="Prizes" onChange={event => this.stateSetter(event)} />
+              {/* <Title> Prizes</Title> */}
+              <StyledInput type="text" name="Prizes" id="Prizes" placeholder="Prizes" onChange={event => this.stateSetter(event)} />
             </FormField>
             <FormField>
-              <Title>Start Date</Title>
-              <StyledInput type="date" nane="Start Date" id="Start Date" size="50" placeholder="Start Date" onChange={event => this.stateSetter(event)} />
+              {/* <Title>Start Date</Title> */}
+              <StyledInput type="text" name="Start Date" id="Start Date" placeholder="mm/dd/yyyy" onChange={event => this.stateSetter(event)} />
             </FormField>
             <FormField>
-              <Title>End Date</Title>
-              <StyledInput type="date" name="End Date" id="End Date" size="50" placeholder="End Date" onChange={event => this.stateSetter(event)} />
+            {/* <Title>End Date</Title> */}
+              <StyledInput type="text" name="End Date" id="End Date" placeholder="mm/dd/yyyy" onChange={event => this.stateSetter(event)} />
             </FormField>
             <FormField>
-              <Title>Image</Title>
-              <StyledInput type="file" name="Image" id="Image" size="50" placeholder="Upload a File" onChange={event => this.stateSetter(event)} />
+              {/* <Title>Image</Title> */}
+              <StyledFileInputContainer>
+                <StyledUploadButton>Upload Image</StyledUploadButton>
+                <StyledFileInput type="file" name="Image" />
+              </StyledFileInputContainer>
             </FormField>
-            <StyledInput type="submit" />
+            <FormField>
+              <StyledSubmit type="submit" />
+            </FormField>
           </form>
         </FormContainer>
       </div>
