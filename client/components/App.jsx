@@ -3,7 +3,6 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Forms from './Forms';
 import readAll from './models/readAll';
 import About from './About';
-import addContest from './models/addContest';
 import Home from './Home';
 import DashBoardContainer from './DashBoardContainer';
 
