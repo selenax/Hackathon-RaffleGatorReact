@@ -24,6 +24,8 @@
     "express": "^4.16.4",
     "faunadb": "^2.5.2",
     "netlify-identity-widget": "^1.4.14",
+    "material-ui": "^0.20.2",
+    "material-ui-search-bar": "^0.4.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "webpack": "^4.20.2",
