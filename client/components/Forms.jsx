@@ -75,12 +75,6 @@ const StyledSubmit = styled.input`
   }
 `;
 
-// const TitleContainer = styled.div`
-//   width: 100%;
-//   border-width: 1px;
-//   border-color: black;
-// `;
-
 class SignUp extends React.Component {
   constructor(props) {
     super(props);
