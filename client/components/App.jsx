@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SearchBar from './SearchBar';
+import Header from './Header';
 import ContestContainer from './ContestContainer';
 import ContestListing from './ContestListing';
 import Login from './Login';
@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <SearchBar />
+        <Header />
         <ContestContainer />
         <ContestListing />
         <Login />
