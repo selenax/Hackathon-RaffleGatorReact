@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import ContestContainer from './ContestContainer';
 import ContestListing from './ContestListing';
+import Login from './Login';
 
 class App extends Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class App extends Component {
         <Header />
         <ContestContainer />
         <ContestListing />
+        <Login />
       </div>
     );
   }
