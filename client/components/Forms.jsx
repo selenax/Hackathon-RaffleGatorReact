@@ -90,6 +90,7 @@ class Forms extends React.Component {
   render() {
     return (
       <div>
+        <Header />
         <FormContainer>
           <h1>Fill out the form below to host a giveaway!</h1>
           <form method="POST" action="https://formspree.io/">

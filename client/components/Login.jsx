@@ -63,9 +63,13 @@ class Login extends Component {
         <Button
           variant="contained"
           color="secondary"
-          style={{ margin: '10px', color: 'white', background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)' }}
+          style={{ margin: '10px', color: 'white', background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)', position: 'relative', overflow: 'hidden' }}
           onClick={this.login}
         >
+          <div className="top left" style={{ position: 'absolute', width: '18px', height: '18px', borderRadius: '100%', backgroundColor: 'lightgrey', top: '-10px', left: '-10px' }}></div>
+          <div className="top right" style={{ position: 'absolute', width: '18px', height: '18px', borderRadius: '100%', backgroundColor: 'lightgrey', top: '-10px', right: '-10px' }}></div>
+          <div className="bottom left" style={{ position: 'absolute', width: '18px', height: '18px', borderRadius: '100%', backgroundColor: 'lightgrey', bottom: '-10px', left: '-10px' }}></div>
+          <div className="bottom right" style={{ position: 'absolute', width: '18px', height: '18px', borderRadius: '100%', backgroundColor: 'lightgrey', bottom: '-10px', right: '-10px' }}></div>
         Login / Sign Up
         </Button>
       </span>
