@@ -11,7 +11,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      contests: null
+      contests: null,
     };
   }
 
@@ -19,9 +19,9 @@ class App extends Component {
 
     readAll().then((results) => {
       this.setState({
-        contests: results
-      })
-    })
+        contests: results,
+      });
+    });
 
   }
 
