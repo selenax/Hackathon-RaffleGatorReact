@@ -19,6 +19,7 @@ class Header extends Component {
           position="static"
           style={{ background: 'lightblue' }}
         >
+          <div style={{ fontFamily: 'Righteous, cursive', marginTop: '3px', marginLeft: '6px', position: 'absolute', fontSize: '48px', color: '#26AF42' }}>RaffleGator</div>
           <Toolbar color="secondary" style={{ marginLeft: 'auto' }}>
             <Login />
             <Button
