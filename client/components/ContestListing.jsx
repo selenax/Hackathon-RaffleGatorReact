@@ -45,7 +45,7 @@ class ContestListing extends Component {
 
   render() {
     return (
-      <Wrapper style={{position: 'relative', overflow: 'hidden' }}>
+      <Wrapper onClick={this.props.onClick} style={{position: 'relative', overflow: 'hidden' }}>
         <InnerCont>
           <div className="top left" style={{ position: 'absolute', width: '41px', height: '41px', borderRadius: '100%', backgroundColor: 'white', top: '-10px', left: '-10px' }}></div>
           <div className="top right" style={{ position: 'absolute', width: '41px', height: '41px', borderRadius: '100%', backgroundColor: 'white', top: '-10px', right: '-10px' }}></div>
