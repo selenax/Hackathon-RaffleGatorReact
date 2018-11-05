@@ -20,6 +20,7 @@ class ContestContainer extends Component {
     this.state = {
       clicked: false,
       data: [],
+      contest: {},
     };
     this.clicked = this.clicked.bind(this);
     this.renderarr = this.renderarr.bind(this);
@@ -31,12 +32,18 @@ class ContestContainer extends Component {
         data: results,
       });
     });
+    // document.getElementById('modal').addEventListener('click', () => {
+    //   this.setState({
+    //     clicked: true,
+    //   });
+    // });
   }
 
-  clicked() {
+  clicked(cont) {
     const clickCheck = !this.state.clicked;
     this.setState({
       clicked: clickCheck,
+      contest: cont,
     });
   }
 
@@ -53,7 +60,7 @@ class ContestContainer extends Component {
           postURL={contest['URL to post']}
           prize={contest.Prizes}
           numContestants={Math.floor(Math.random() * 2000)}
-          onClick={this.clicked}
+          onClick={() => { this.clicked(contest); }}
         />
       );
     });
@@ -68,19 +75,35 @@ class ContestContainer extends Component {
         }
         <div id="popup">
           {
-            this.state.clicked ?
-              <ContestPopup 
-                title="Fake Contest 3"
-                hostName="Johnny Youtuber"
-                contestSite="Youtube"
-                img="../images/image.jpg"
-                startDate="Nov. 3, 2018"
-                endDate="Nov. 5, 2018"
-                postURL="https://youtube.com/"
-                prize="Bag of Chips"
-                numContestants="1,593"/> : null
+            this.state.clicked
+              ? (
+                <div
+                  id="modal"
+                  style={{ display: 'flex',  background: 'rgba(0,0,0,0.7)', zIndex: '1020', width: '100%', height: '100%', position: 'fixed', top: '0',
+                    right: '0',
+                    bottom: '0',
+                    left: '0',
+                    justifyContent: 'center',
+                    alignContent: 'baseline',
+                    alignItems: 'center',
+                  }}
+                  onClick={(e) => { if(e.target.id === 'modal') {this.setState({ clicked: false }); } }}
+                >
+                  <ContestPopup
+                    title={this.state.contest.Title}
+                    hostName={this.state.contest.Name}
+                    contestSite={this.state.contest['Social Media Site']}
+                    img="https://imgur.com/a/MnC7iYZ"
+                    startDate={this.state.contest['Start Date']}
+                    endDate={this.state.contest['End Date']}
+                    postURL={this.state.contest['URL to post']}
+                    prize={this.state.contest.Prizes}
+                    numContestants={Math.floor(Math.random() * 2000)}
+                  />
+                </div>
+              ) : null
           }
-          </div>
+        </div>
       </Wrapper>
     );
   }

@@ -41,35 +41,11 @@ class ContestPopup extends Component {
 
   render() {
     return (
-      <Wrapper style={{ position: 'relative', overflow: 'hidden' }}>
+      <Wrapper style={{ backgroundColor: 'white', borderRadius: '10px', height: '60%', display: 'flex', justifyContent: 'center' }}>
         <PopupContainer>
-          <div
-            className="top left"
-            style={{
-	            position: 'absolute', width: '41px', height: '41px', borderRadius: '100%', backgroundColor: 'white', top: '-10px', left: '-10px',
-	          }}
-          />
-          <div
-            className="top right"
-            style={{
-	            position: 'absolute', width: '41px', height: '41px', borderRadius: '100%', backgroundColor: 'white', top: '-10px', right: '-10px',
-	          }}
-          />
-          <div
-            className="bottom left"
-            style={{
-	            position: 'absolute', width: '41px', height: '41px', borderRadius: '100%', backgroundColor: 'white', bottom: '-10px', left: '-10px',
-	          }}
-          />
-          <div
-            className="bottom right"
-            style={{
-	            position: 'absolute', width: '41px', height: '41px', borderRadius: '100%', backgroundColor: 'white', bottom: '-10px', right: '-10px',
-	          }}
-          />
           <HeaderContainer>
             <div>
-              <img alt="Host Profile pic form social media" />
+              <img src={this.props.img} alt="Host Profile pic form social media" />
               <h1 style={{ fontSize: '65px', margin: '15px' }}>{this.props.title}</h1>
             </div>
             <div>
