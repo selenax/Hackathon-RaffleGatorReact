@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import ContestListing from './ContestListing';
 import ContestPopup from './ContestPopup';
-import dummyData from '../../dummyData';
+
 
 const Wrapper = styled.div`
 	display: flex;
