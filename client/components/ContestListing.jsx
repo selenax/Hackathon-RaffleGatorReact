@@ -55,10 +55,11 @@ class ContestListing extends Component {
             <h1 style={{ fontSize: '30px', margin: '15px' }}>{this.props.title}</h1>
             <h2 style={{ fontSize: '20px', marginLeft: '15px', marginTop: '0', marginBottom: '0' }}>{this.props.hostName}</h2>
           </HeaderContainer>
-          <p style={{ display: 'flex', float: 'right', flexStart: 'flex-end', marginLeft: '15px' }}>
+          <p style={{ display: 'flex', float: 'right', flexStart: 'flex-end', marginLeft: '15px', marginTop: '0', marginBottom: '0' }}>
   Number of Entries:
             {this.props.numContestants}
           </p>
+          <p style={{ marginLeft: '15px', marginTop: '0', marginBottom: '2px', fontSize: '10px' }}>click for more info!</p>
         </InnerCont>
       </Wrapper>
     );
