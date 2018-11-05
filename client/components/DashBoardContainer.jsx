@@ -48,7 +48,7 @@ function FormRow(props) {
         </Paper>
       </Grid>
       <Grid item xs={4}>
-        <Paper className={classes.paper}>Deadline: December 20, 2018</Paper>
+        <Paper className={classes.paper}>Deadline: March 3, 2019</Paper>
       </Grid>
     </React.Fragment>
   );
