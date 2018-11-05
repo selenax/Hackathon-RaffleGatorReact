@@ -5,6 +5,7 @@ import readAll from './models/readAll';
 import About from './About';
 import Home from './Home';
 import DashBoardContainer from './DashBoardContainer';
+import ContactUs from './Contactus';
 
 class App extends Component {
   constructor(props) {
@@ -15,11 +16,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    readAll().then((results) => {
-      this.setState({
-        contests: results,
-      });
-    });
+    // readAll().then((results) => {
+    //   this.setState({
+    //     contests: results,
+    //   });
+    // });
   }
 
   render() {
@@ -30,6 +31,7 @@ class App extends Component {
           <Route path="/form" component={Forms} />
           <Route path="/about" component={About} />
           <Route path="/dashboard" component={DashBoardContainer} />
+          <Route path="/contactus" component={ContactUs} />
         </div>
       </BrowserRouter>
     );
