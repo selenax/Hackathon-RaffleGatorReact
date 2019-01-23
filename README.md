@@ -1,4 +1,4 @@
-# RaffleGatorReact
+# RaffleGatorReact - Hackathon
 
 To transpile JSX to JS into a bundle.js run this command
 
