@@ -1,5 +1,9 @@
 # RaffleGatorReact - Hackathon
 
+A social contest platform designed to help business owners and marketers to understand more about their target audiences and increase the value of their brands.
+
+
+
 To transpile JSX to JS into a bundle.js run this command
 
 ```
