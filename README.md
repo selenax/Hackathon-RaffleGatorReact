@@ -1,4 +1,4 @@
-# RaffleGatorReact - Hackathon
+# RaffleGatorReact - 2018 JAMstack Hackathon
 
 A social contest platform designed to help business owners and marketers to understand more about their target audiences and increase the value of their brands.
 
