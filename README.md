@@ -1,8 +1,8 @@
-# RaffleGatorReact - 2018 JAMstack Hackathon
+# RaffleGatorReact - JAMstack Hackathon
 
-A social contest platform designed to help business owners and marketers to understand more about their target audiences and increase the value of their brands.
+A social contest aggregator platform designed to help small businesses and marketers to gain deeper insight into their target audiences and strengthen their brand value.
 
-
+Tech Stack: React, FaunaDB, Netlify, Fauna, Material UI 
 
 To transpile JSX to JS into a bundle.js run this command
 
